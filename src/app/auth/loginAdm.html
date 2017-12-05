@@ -1,0 +1,50 @@
+<div class="logo-name">
+  <img style="width: 100px" src="../../assets/images/icone-principal.png"/>
+</div>
+
+<div class="middle-box text-center loginscreen animated fadeInDown" style="overflow: hidden;">
+
+  <div class="middle-box-container">
+    <h2 style="color: #222328; margin-bottom: 40px; font-size: 32px;">Login do Administrador</h2>
+
+    <form name="form" class="m-t" role="form">
+      <div class="row">
+        <div class="col-lg-12" style="margin-bottom: 26px; position: relative;">
+          <div class="input-title">Email</div>
+          <input ng-class="(form.login.$invalid && form.login.$touched) ? 'invalid-class':''" name="login" ng-model="ctrl.user.username" type="email"
+                 class="input-field input-field-with-icon"
+                 placeholder="exemplo@test.com"
+                 style="padding-left: 37px !important; height: 42px;"
+                 required>
+          <i class="fa fa-envelope input-icon" aria-hidden="true"></i>
+        </div>
+
+        <div class="col-xs-6">
+          <div class="input-title">Senha</div>
+          <input ng-class="(form.password.$invalid && form.password.$touched) ? 'invalid-class':''" name="password" ng-model="ctrl.user.password" type="password"
+                 class="input-field input-field-with-icon"
+                 placeholder="Senha"
+                 style="padding-left: 37px !important; height: 42px;"
+                 required>
+          <i class="fa fa-lock input-icon" aria-hidden="true" style="left: 30px;"></i>
+        </div>
+
+        <div class="col-xs-6" style="padding-bottom: 50px">
+          <button ng-disabled="form.$invalid" type="submit" style="margin-top: 27px; height: 42px;"
+                  class="btn btn-primary block full-width"
+                  ng-click="ctrl.auth()">
+            <span>Login</span>
+          </button>
+        </div>
+      
+         <div class="col-xs-1" style="float: right; width: auto; color: #1dc5a3; padding-bottom: 5px">
+          <button ng-click="ctrl.aluno()" style="background: none; border:none;"> 
+            <span> Sou Aluno </span> 
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> 
+          </button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
