@@ -3,10 +3,10 @@
     <div class="input-title" style="text-align: center;">Encontre o artigo ideal pra você</div>
     <div class="col-xs-12">
       <input type="text"
-             class="input-field"
+             class="input-field" ng-model="ctrl.query"
              style="height: 43px;width:50%;display: inline-block"
              required>
-      <button class="btn btn-primary" style="height: 42px;display: inline-block;vertical-align: bottom">Pesquisar</button>
+      <button class="btn btn-primary" style="height: 42px;display: inline-block;vertical-align: bottom" ng-click="ctrl.doRequest()">Pesquisar</button>
     </div>
   </div>
   <div class="white-bg-answer col-xs-12" ng-repeat="i in ctrl.artigos">
@@ -15,9 +15,6 @@
     </div>
     <div class="title-article">
       ID: <span style="font-weight: normal">{{i.id}}</span>
-    </div>
-    <div class="title-article">
-      Descrição: <span style="font-weight: normal">{{i.description}}</span>
     </div>
   </div>
 </div>

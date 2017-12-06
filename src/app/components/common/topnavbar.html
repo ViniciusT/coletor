@@ -12,7 +12,7 @@
               <i class="fa fa-info" aria-hidden="true"></i>RI
             </a>
           </li>
-          <li style="float: right;" ng-show="ctrl.state === 'index.main'">
+          <li style="float: right;width: 170px" ng-show="ctrl.state === 'index.main'">
             <a ng-click="ctrl.showBox = !ctrl.showBox">
               Modulo:
               <span>
@@ -22,7 +22,10 @@
           </li>
         </ul>
     </nav>
-  <div class="box-down" ng-show="ctrl.showBox" ng-click="ctrl.functBox()">
-    {{ctrl.notselectedValue}}
+  <div class="box-down" ng-show="ctrl.showBox" >
+    <div ng-click="ctrl.functBox(0)" ng-if="ctrl.selectedValue !== ctrl.notselectedValue[0]">{{ctrl.notselectedValue[0]}}</div>
+    <div ng-click="ctrl.functBox(1)" ng-if="ctrl.selectedValue !== ctrl.notselectedValue[1]">{{ctrl.notselectedValue[1]}}</div>
+    <div ng-click="ctrl.functBox(2)" ng-if="ctrl.selectedValue !== ctrl.notselectedValue[2]">{{ctrl.notselectedValue[2]}}</div>
+    <div ng-click="ctrl.functBox(3)" ng-if="ctrl.selectedValue !== ctrl.notselectedValue[3]">{{ctrl.notselectedValue[3]}}</div>
   </div>
 </div>
